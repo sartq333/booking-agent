@@ -22,27 +22,27 @@ Output for general chat:
 
 # Future scope of improvement:
 
-- Making the LLM more robust by adding the chat history functionality i.e. LLMs now
+1. Making the LLM more robust by adding the chat history functionality i.e. LLMs now
 remembers all the previous conversations which have happened with a particular
 user.
 
--​ Currently the tool/function is a dummy function (code snippet attached below for
+2.​ Currently the tool/function is a dummy function (code snippet attached below for
 reference), we can connect it with DB and can share the latest information with the
 user.
-```py
-# Function which will be called if tool calling happens.​
-@tool​
-def book_room(name, contact_number, check_in_date, check_out_date,
-room_type)-> str:​
-"""Book a hotel's room on behalf of the user."""​
-​
-if(payment_done()):​
-​
-​ # update the DB that a room is booked.​
-​ return f"Thanks {name}. Your {room_type} room has been booked
-and details will be shared to your contact number:
-{contact_number}."​
-return "Payment was not successful. Room wasn't booked."
-```
+  ```py
+  # Function which will be called if tool calling happens.​
+  @tool​
+  def book_room(name, contact_number, check_in_date, check_out_date,
+  room_type)-> str:​
+  """Book a hotel's room on behalf of the user."""​
+  ​
+  if(payment_done()):​
+  ​
+  ​ # update the DB that a room is booked.​
+  ​ return f"Thanks {name}. Your {room_type} room has been booked
+  and details will be shared to your contact number:
+  {contact_number}."​
+  return "Payment was not successful. Room wasn't booked."
+  ```
 
-- Integration with website or hotel documents via RAG so that even staff can use it (better response generation for general hotel related queries).
+3. Integration with website or hotel documents via RAG so that even staff can use it (better response generation for general hotel related queries).
