@@ -46,3 +46,5 @@ user.
   ```
 
 3. Integration with website or hotel documents via RAG so that even staff can use it (better response generation for general hotel related queries).
+
+This video can also be referred while integrating tool calling on llms: https://www.youtube.com/watch?v=tC41W4DG70o.
